@@ -13,7 +13,10 @@
 /home/javid/ros2ws/ros2ws/install/openrb_assignment/lib/python3.10/site-packages/openrb_assignment/__pycache__/__init__.cpython-310.pyc
 /home/javid/ros2ws/ros2ws/install/openrb_assignment/lib/python3.10/site-packages/openrb_assignment/__pycache__/wave_tf_viz.launch.cpython-310.pyc
 /home/javid/ros2ws/ros2ws/install/openrb_assignment/share/ament_index/resource_index/packages/openrb_assignment
+/home/javid/ros2ws/ros2ws/install/openrb_assignment/share/openrb_assignment/launch/asg2.launch.py
 /home/javid/ros2ws/ros2ws/install/openrb_assignment/share/openrb_assignment/package.xml
+/home/javid/ros2ws/ros2ws/install/openrb_assignment/share/openrb_assignment/config/servo_subscriber_config.yaml
+/home/javid/ros2ws/ros2ws/install/openrb_assignment/share/openrb_assignment/config/sin_generator_config.yaml
 /home/javid/ros2ws/ros2ws/install/openrb_assignment/lib/python3.10/site-packages/openrb_assignment-0.0.0-py3.10.egg-info/zip-safe
 /home/javid/ros2ws/ros2ws/install/openrb_assignment/lib/python3.10/site-packages/openrb_assignment-0.0.0-py3.10.egg-info/dependency_links.txt
 /home/javid/ros2ws/ros2ws/install/openrb_assignment/lib/python3.10/site-packages/openrb_assignment-0.0.0-py3.10.egg-info/entry_points.txt

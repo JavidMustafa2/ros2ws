@@ -9,7 +9,10 @@ setup(
     data_files=[
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
+        ('share/' + package_name +'/launch',['launch/asg2.launch.py']),
         ('share/' + package_name, ['package.xml']),
+        ('share/' + package_name +'/config', ['config/servo_subscriber_config.yaml']),
+        ('share/' + package_name +'/config', ['config/sin_generator_config.yaml']),
     ],
     install_requires=['setuptools'],
     zip_safe=True,

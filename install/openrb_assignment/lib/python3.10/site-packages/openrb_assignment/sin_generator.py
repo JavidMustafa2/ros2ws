@@ -14,14 +14,14 @@ class SinGenerator(Node):
         self.publisher_ = self.create_publisher(Float64, 'sinSignal', 10)
         #declaring params
         self.declare_parameter('frequency', 1.0) #hertz
-        self.declare_parameter('amplitude', -20.0) 
+        self.declare_parameter('amplitude', 1.0) 
         self.declare_parameter('offset', 0.0) #degrees
         self.declare_parameter('timer_period',0.1)
         #extracting params
-        self.timer_period = self.get_parameter('timer_period').get_parameter_value().double_value # seconds
-        self.freq= self.get_parameter('frequency').get_parameter_value().double_value 
-        self.amp = self.get_parameter('amplitude').get_parameter_value().double_value 
-        self.off = self.get_parameter('offset').get_parameter_value().double_value 
+        self.timer_period = self.get_parameter('timer_period').value# seconds
+        self.freq= self.get_parameter('frequency').value
+        self.amp = self.get_parameter('amplitude').value
+        self.off = self.get_parameter('offset').value
         #create timer and counter
         self.timer = self.create_timer(self.timer_period, self.timer_callback)
         self.start_time = self.get_clock().now()

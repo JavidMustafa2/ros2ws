@@ -1,0 +1,23 @@
+[0.743s] Invoking command in '/home/javid/ros2ws/ros2ws/src/openrb_assignment': PYTHONPATH=/home/javid/ros2ws/ros2ws/build/openrb_assignment/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/javid/ros2ws/ros2ws/install/openrb_assignment/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/openrb_assignment build --build-base /home/javid/ros2ws/ros2ws/build/openrb_assignment/build install --record /home/javid/ros2ws/ros2ws/build/openrb_assignment/install.log --single-version-externally-managed install_data
+[1.016s] running egg_info
+[1.017s] writing ../../build/openrb_assignment/openrb_assignment.egg-info/PKG-INFO
+[1.018s] writing dependency_links to ../../build/openrb_assignment/openrb_assignment.egg-info/dependency_links.txt
+[1.018s] writing entry points to ../../build/openrb_assignment/openrb_assignment.egg-info/entry_points.txt
+[1.018s] writing requirements to ../../build/openrb_assignment/openrb_assignment.egg-info/requires.txt
+[1.018s] writing top-level names to ../../build/openrb_assignment/openrb_assignment.egg-info/top_level.txt
+[1.020s] reading manifest file '../../build/openrb_assignment/openrb_assignment.egg-info/SOURCES.txt'
+[1.021s] adding license file 'LICENSE'
+[1.021s] writing manifest file '../../build/openrb_assignment/openrb_assignment.egg-info/SOURCES.txt'
+[1.022s] running build
+[1.022s] running build_py
+[1.022s] running install
+[1.023s] running install_lib
+[1.024s] running install_data
+[1.024s] running install_egg_info
+[1.027s] removing '/home/javid/ros2ws/ros2ws/install/openrb_assignment/lib/python3.10/site-packages/openrb_assignment-0.0.0-py3.10.egg-info' (and everything under it)
+[1.027s] Copying ../../build/openrb_assignment/openrb_assignment.egg-info to /home/javid/ros2ws/ros2ws/install/openrb_assignment/lib/python3.10/site-packages/openrb_assignment-0.0.0-py3.10.egg-info
+[1.028s] running install_scripts
+[1.051s] Installing listener script to /home/javid/ros2ws/ros2ws/install/openrb_assignment/lib/openrb_assignment
+[1.052s] Installing talker script to /home/javid/ros2ws/ros2ws/install/openrb_assignment/lib/openrb_assignment
+[1.052s] writing list of installed files to '/home/javid/ros2ws/ros2ws/build/openrb_assignment/install.log'
+[1.077s] Invoked command in '/home/javid/ros2ws/ros2ws/src/openrb_assignment' returned '0': PYTHONPATH=/home/javid/ros2ws/ros2ws/build/openrb_assignment/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/javid/ros2ws/ros2ws/install/openrb_assignment/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/openrb_assignment build --build-base /home/javid/ros2ws/ros2ws/build/openrb_assignment/build install --record /home/javid/ros2ws/ros2ws/build/openrb_assignment/install.log --single-version-externally-managed install_data

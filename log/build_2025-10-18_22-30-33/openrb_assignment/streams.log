@@ -1,0 +1,18 @@
+[0.565s] Invoking command in '/home/javid/ros2ws/ros2ws/src/openrb_assignment': PYTHONPATH=/home/javid/ros2ws/ros2ws/build/openrb_assignment/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/javid/ros2ws/ros2ws/install/openrb_assignment/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/openrb_assignment build --build-base /home/javid/ros2ws/ros2ws/build/openrb_assignment/build install --record /home/javid/ros2ws/ros2ws/build/openrb_assignment/install.log --single-version-externally-managed install_data
+[0.795s] running egg_info
+[0.795s] writing ../../build/openrb_assignment/openrb_assignment.egg-info/PKG-INFO
+[0.796s] writing dependency_links to ../../build/openrb_assignment/openrb_assignment.egg-info/dependency_links.txt
+[0.796s] writing entry points to ../../build/openrb_assignment/openrb_assignment.egg-info/entry_points.txt
+[0.796s] writing requirements to ../../build/openrb_assignment/openrb_assignment.egg-info/requires.txt
+[0.796s] writing top-level names to ../../build/openrb_assignment/openrb_assignment.egg-info/top_level.txt
+[0.797s] reading manifest file '../../build/openrb_assignment/openrb_assignment.egg-info/SOURCES.txt'
+[0.798s] adding license file 'LICENSE'
+[0.799s] writing manifest file '../../build/openrb_assignment/openrb_assignment.egg-info/SOURCES.txt'
+[0.799s] running build
+[0.799s] running build_py
+[0.799s] running install
+[0.799s] running install_lib
+[0.801s] running install_data
+[0.801s] creating /home/javid/ros2ws/ros2ws/install/openrb_assignment/share/openrb_assignment/config
+[0.801s] error: can't copy 'servo_subscriber_config.yaml': doesn't exist or not a regular file
+[0.819s] Invoked command in '/home/javid/ros2ws/ros2ws/src/openrb_assignment' returned '1': PYTHONPATH=/home/javid/ros2ws/ros2ws/build/openrb_assignment/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/javid/ros2ws/ros2ws/install/openrb_assignment/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/openrb_assignment build --build-base /home/javid/ros2ws/ros2ws/build/openrb_assignment/build install --record /home/javid/ros2ws/ros2ws/build/openrb_assignment/install.log --single-version-externally-managed install_data

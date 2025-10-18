@@ -9,6 +9,9 @@ setup.py
 ../../build/openrb_assignment/openrb_assignment.egg-info/requires.txt
 ../../build/openrb_assignment/openrb_assignment.egg-info/top_level.txt
 ../../build/openrb_assignment/openrb_assignment.egg-info/zip-safe
+config/servo_subscriber_config.yaml
+config/sin_generator_config.yaml
+launch/asg2.launch.py
 openrb_assignment/__init__.py
 openrb_assignment/dynamixel_client.py
 openrb_assignment/dynamixel_registers.py

@@ -1,0 +1,5 @@
+servo_subscriber:
+  ros__parameters:
+    id: 1
+    baud: 57600
+    port: '/dev/ttyACM0' 
