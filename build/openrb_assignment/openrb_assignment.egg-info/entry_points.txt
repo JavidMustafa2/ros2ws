@@ -1,0 +1,4 @@
+[console_scripts]
+listener = openrb_assignment.servo_subscriber:main
+talker = openrb_assignment.sin_generator:main
+

@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: openrb-assignment
+Version: 0.0.0
+Summary: ROS2 package for ROS2 Tutorial Assignment for RWR2025
+Home-page: UNKNOWN
+Maintainer: javid
+Maintainer-email: jmustafa2011@hotmail.com
+License: Apache-2.0
+Platform: UNKNOWN
+Provides-Extra: test
+License-File: LICENSE
+
+UNKNOWN
+

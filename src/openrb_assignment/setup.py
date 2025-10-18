@@ -15,7 +15,7 @@ setup(
     zip_safe=True,
     maintainer='javid',
     maintainer_email='jmustafa2011@hotmail.com',
-    description='TODO: Package description',
+    description='ROS2 package for ROS2 Tutorial Assignment for RWR2025',
     license='Apache-2.0',
     extras_require={
         'test': [
@@ -23,7 +23,8 @@ setup(
         ],
     },
     entry_points={
-        'console_scripts': [
+        'console_scripts': ['talker = openrb_assignment.sin_generator:main',
+                            'listener = openrb_assignment.servo_subscriber:main',
         ],
     },
 )

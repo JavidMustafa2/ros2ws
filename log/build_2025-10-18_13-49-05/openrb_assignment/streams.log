@@ -1,0 +1,59 @@
+[0.588s] Invoking command in '/home/javid/ros2ws/ros2ws/src/openrb_assignment': PYTHONPATH=/home/javid/ros2ws/ros2ws/build/openrb_assignment/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/javid/ros2ws/ros2ws/install/openrb_assignment/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/openrb_assignment build --build-base /home/javid/ros2ws/ros2ws/build/openrb_assignment/build install --record /home/javid/ros2ws/ros2ws/build/openrb_assignment/install.log --single-version-externally-managed install_data
+[0.811s] running egg_info
+[0.811s] creating ../../build/openrb_assignment/openrb_assignment.egg-info
+[0.811s] writing ../../build/openrb_assignment/openrb_assignment.egg-info/PKG-INFO
+[0.811s] writing dependency_links to ../../build/openrb_assignment/openrb_assignment.egg-info/dependency_links.txt
+[0.811s] writing entry points to ../../build/openrb_assignment/openrb_assignment.egg-info/entry_points.txt
+[0.812s] writing requirements to ../../build/openrb_assignment/openrb_assignment.egg-info/requires.txt
+[0.812s] writing top-level names to ../../build/openrb_assignment/openrb_assignment.egg-info/top_level.txt
+[0.812s] writing manifest file '../../build/openrb_assignment/openrb_assignment.egg-info/SOURCES.txt'
+[0.813s] reading manifest file '../../build/openrb_assignment/openrb_assignment.egg-info/SOURCES.txt'
+[0.813s] adding license file 'LICENSE'
+[0.814s] writing manifest file '../../build/openrb_assignment/openrb_assignment.egg-info/SOURCES.txt'
+[0.814s] running build
+[0.814s] running build_py
+[0.814s] creating /home/javid/ros2ws/ros2ws/build/openrb_assignment/build
+[0.814s] creating /home/javid/ros2ws/ros2ws/build/openrb_assignment/build/lib
+[0.814s] creating /home/javid/ros2ws/ros2ws/build/openrb_assignment/build/lib/openrb_assignment
+[0.814s] copying openrb_assignment/dynamixel_client.py -> /home/javid/ros2ws/ros2ws/build/openrb_assignment/build/lib/openrb_assignment
+[0.814s] copying openrb_assignment/servo_subscriber.py -> /home/javid/ros2ws/ros2ws/build/openrb_assignment/build/lib/openrb_assignment
+[0.814s] copying openrb_assignment/dynamixel_registers.py -> /home/javid/ros2ws/ros2ws/build/openrb_assignment/build/lib/openrb_assignment
+[0.815s] copying openrb_assignment/sin_generator.py -> /home/javid/ros2ws/ros2ws/build/openrb_assignment/build/lib/openrb_assignment
+[0.815s] copying openrb_assignment/utils.py -> /home/javid/ros2ws/ros2ws/build/openrb_assignment/build/lib/openrb_assignment
+[0.815s] copying openrb_assignment/__init__.py -> /home/javid/ros2ws/ros2ws/build/openrb_assignment/build/lib/openrb_assignment
+[0.815s] copying openrb_assignment/wave_tf_viz.launch.py -> /home/javid/ros2ws/ros2ws/build/openrb_assignment/build/lib/openrb_assignment
+[0.815s] running install
+[0.815s] running install_lib
+[0.816s] creating /home/javid/ros2ws/ros2ws/install/openrb_assignment/lib/python3.10/site-packages/openrb_assignment
+[0.816s] copying /home/javid/ros2ws/ros2ws/build/openrb_assignment/build/lib/openrb_assignment/dynamixel_client.py -> /home/javid/ros2ws/ros2ws/install/openrb_assignment/lib/python3.10/site-packages/openrb_assignment
+[0.816s] copying /home/javid/ros2ws/ros2ws/build/openrb_assignment/build/lib/openrb_assignment/servo_subscriber.py -> /home/javid/ros2ws/ros2ws/install/openrb_assignment/lib/python3.10/site-packages/openrb_assignment
+[0.816s] copying /home/javid/ros2ws/ros2ws/build/openrb_assignment/build/lib/openrb_assignment/dynamixel_registers.py -> /home/javid/ros2ws/ros2ws/install/openrb_assignment/lib/python3.10/site-packages/openrb_assignment
+[0.817s] copying /home/javid/ros2ws/ros2ws/build/openrb_assignment/build/lib/openrb_assignment/sin_generator.py -> /home/javid/ros2ws/ros2ws/install/openrb_assignment/lib/python3.10/site-packages/openrb_assignment
+[0.817s] copying /home/javid/ros2ws/ros2ws/build/openrb_assignment/build/lib/openrb_assignment/utils.py -> /home/javid/ros2ws/ros2ws/install/openrb_assignment/lib/python3.10/site-packages/openrb_assignment
+[0.817s] copying /home/javid/ros2ws/ros2ws/build/openrb_assignment/build/lib/openrb_assignment/__init__.py -> /home/javid/ros2ws/ros2ws/install/openrb_assignment/lib/python3.10/site-packages/openrb_assignment
+[0.817s] copying /home/javid/ros2ws/ros2ws/build/openrb_assignment/build/lib/openrb_assignment/wave_tf_viz.launch.py -> /home/javid/ros2ws/ros2ws/install/openrb_assignment/lib/python3.10/site-packages/openrb_assignment
+[0.817s] byte-compiling /home/javid/ros2ws/ros2ws/install/openrb_assignment/lib/python3.10/site-packages/openrb_assignment/dynamixel_client.py to dynamixel_client.cpython-310.pyc
+[0.824s] byte-compiling /home/javid/ros2ws/ros2ws/install/openrb_assignment/lib/python3.10/site-packages/openrb_assignment/servo_subscriber.py to servo_subscriber.cpython-310.pyc
+[0.824s] byte-compiling /home/javid/ros2ws/ros2ws/install/openrb_assignment/lib/python3.10/site-packages/openrb_assignment/dynamixel_registers.py to dynamixel_registers.cpython-310.pyc
+[0.825s] byte-compiling /home/javid/ros2ws/ros2ws/install/openrb_assignment/lib/python3.10/site-packages/openrb_assignment/sin_generator.py to sin_generator.cpython-310.pyc
+[0.825s] byte-compiling /home/javid/ros2ws/ros2ws/install/openrb_assignment/lib/python3.10/site-packages/openrb_assignment/utils.py to utils.cpython-310.pyc
+[0.825s]   File "/home/javid/ros2ws/ros2ws/install/openrb_assignment/lib/python3.10/site-packages/openrb_assignment/sin_generator.py", line 29
+[0.825s]     rclpy.spin(sin_generator))
+[0.825s]                              ^
+[0.825s] SyntaxError: unmatched ')'
+[0.825s] 
+[0.826s] byte-compiling /home/javid/ros2ws/ros2ws/install/openrb_assignment/lib/python3.10/site-packages/openrb_assignment/__init__.py to __init__.cpython-310.pyc
+[0.826s] byte-compiling /home/javid/ros2ws/ros2ws/install/openrb_assignment/lib/python3.10/site-packages/openrb_assignment/wave_tf_viz.launch.py to wave_tf_viz.launch.cpython-310.pyc
+[0.826s] running install_data
+[0.826s] creating /home/javid/ros2ws/ros2ws/install/openrb_assignment/share/ament_index
+[0.827s] creating /home/javid/ros2ws/ros2ws/install/openrb_assignment/share/ament_index/resource_index
+[0.827s] creating /home/javid/ros2ws/ros2ws/install/openrb_assignment/share/ament_index/resource_index/packages
+[0.827s] copying resource/openrb_assignment -> /home/javid/ros2ws/ros2ws/install/openrb_assignment/share/ament_index/resource_index/packages
+[0.827s] copying package.xml -> /home/javid/ros2ws/ros2ws/install/openrb_assignment/share/openrb_assignment
+[0.827s] running install_egg_info
+[0.828s] Copying ../../build/openrb_assignment/openrb_assignment.egg-info to /home/javid/ros2ws/ros2ws/install/openrb_assignment/lib/python3.10/site-packages/openrb_assignment-0.0.0-py3.10.egg-info
+[0.829s] running install_scripts
+[0.848s] Installing listener script to /home/javid/ros2ws/ros2ws/install/openrb_assignment/lib/openrb_assignment
+[0.848s] Installing talker script to /home/javid/ros2ws/ros2ws/install/openrb_assignment/lib/openrb_assignment
+[0.849s] writing list of installed files to '/home/javid/ros2ws/ros2ws/build/openrb_assignment/install.log'
+[0.871s] Invoked command in '/home/javid/ros2ws/ros2ws/src/openrb_assignment' returned '0': PYTHONPATH=/home/javid/ros2ws/ros2ws/build/openrb_assignment/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/javid/ros2ws/ros2ws/install/openrb_assignment/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/openrb_assignment build --build-base /home/javid/ros2ws/ros2ws/build/openrb_assignment/build install --record /home/javid/ros2ws/ros2ws/build/openrb_assignment/install.log --single-version-externally-managed install_data

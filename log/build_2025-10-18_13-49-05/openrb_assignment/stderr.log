@@ -1,0 +1,5 @@
+  File "/home/javid/ros2ws/ros2ws/install/openrb_assignment/lib/python3.10/site-packages/openrb_assignment/sin_generator.py", line 29
+    rclpy.spin(sin_generator))
+                             ^
+SyntaxError: unmatched ')'
+

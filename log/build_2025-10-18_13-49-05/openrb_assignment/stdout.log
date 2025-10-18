@@ -1,0 +1,52 @@
+running egg_info
+creating ../../build/openrb_assignment/openrb_assignment.egg-info
+writing ../../build/openrb_assignment/openrb_assignment.egg-info/PKG-INFO
+writing dependency_links to ../../build/openrb_assignment/openrb_assignment.egg-info/dependency_links.txt
+writing entry points to ../../build/openrb_assignment/openrb_assignment.egg-info/entry_points.txt
+writing requirements to ../../build/openrb_assignment/openrb_assignment.egg-info/requires.txt
+writing top-level names to ../../build/openrb_assignment/openrb_assignment.egg-info/top_level.txt
+writing manifest file '../../build/openrb_assignment/openrb_assignment.egg-info/SOURCES.txt'
+reading manifest file '../../build/openrb_assignment/openrb_assignment.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../build/openrb_assignment/openrb_assignment.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/javid/ros2ws/ros2ws/build/openrb_assignment/build
+creating /home/javid/ros2ws/ros2ws/build/openrb_assignment/build/lib
+creating /home/javid/ros2ws/ros2ws/build/openrb_assignment/build/lib/openrb_assignment
+copying openrb_assignment/dynamixel_client.py -> /home/javid/ros2ws/ros2ws/build/openrb_assignment/build/lib/openrb_assignment
+copying openrb_assignment/servo_subscriber.py -> /home/javid/ros2ws/ros2ws/build/openrb_assignment/build/lib/openrb_assignment
+copying openrb_assignment/dynamixel_registers.py -> /home/javid/ros2ws/ros2ws/build/openrb_assignment/build/lib/openrb_assignment
+copying openrb_assignment/sin_generator.py -> /home/javid/ros2ws/ros2ws/build/openrb_assignment/build/lib/openrb_assignment
+copying openrb_assignment/utils.py -> /home/javid/ros2ws/ros2ws/build/openrb_assignment/build/lib/openrb_assignment
+copying openrb_assignment/__init__.py -> /home/javid/ros2ws/ros2ws/build/openrb_assignment/build/lib/openrb_assignment
+copying openrb_assignment/wave_tf_viz.launch.py -> /home/javid/ros2ws/ros2ws/build/openrb_assignment/build/lib/openrb_assignment
+running install
+running install_lib
+creating /home/javid/ros2ws/ros2ws/install/openrb_assignment/lib/python3.10/site-packages/openrb_assignment
+copying /home/javid/ros2ws/ros2ws/build/openrb_assignment/build/lib/openrb_assignment/dynamixel_client.py -> /home/javid/ros2ws/ros2ws/install/openrb_assignment/lib/python3.10/site-packages/openrb_assignment
+copying /home/javid/ros2ws/ros2ws/build/openrb_assignment/build/lib/openrb_assignment/servo_subscriber.py -> /home/javid/ros2ws/ros2ws/install/openrb_assignment/lib/python3.10/site-packages/openrb_assignment
+copying /home/javid/ros2ws/ros2ws/build/openrb_assignment/build/lib/openrb_assignment/dynamixel_registers.py -> /home/javid/ros2ws/ros2ws/install/openrb_assignment/lib/python3.10/site-packages/openrb_assignment
+copying /home/javid/ros2ws/ros2ws/build/openrb_assignment/build/lib/openrb_assignment/sin_generator.py -> /home/javid/ros2ws/ros2ws/install/openrb_assignment/lib/python3.10/site-packages/openrb_assignment
+copying /home/javid/ros2ws/ros2ws/build/openrb_assignment/build/lib/openrb_assignment/utils.py -> /home/javid/ros2ws/ros2ws/install/openrb_assignment/lib/python3.10/site-packages/openrb_assignment
+copying /home/javid/ros2ws/ros2ws/build/openrb_assignment/build/lib/openrb_assignment/__init__.py -> /home/javid/ros2ws/ros2ws/install/openrb_assignment/lib/python3.10/site-packages/openrb_assignment
+copying /home/javid/ros2ws/ros2ws/build/openrb_assignment/build/lib/openrb_assignment/wave_tf_viz.launch.py -> /home/javid/ros2ws/ros2ws/install/openrb_assignment/lib/python3.10/site-packages/openrb_assignment
+byte-compiling /home/javid/ros2ws/ros2ws/install/openrb_assignment/lib/python3.10/site-packages/openrb_assignment/dynamixel_client.py to dynamixel_client.cpython-310.pyc
+byte-compiling /home/javid/ros2ws/ros2ws/install/openrb_assignment/lib/python3.10/site-packages/openrb_assignment/servo_subscriber.py to servo_subscriber.cpython-310.pyc
+byte-compiling /home/javid/ros2ws/ros2ws/install/openrb_assignment/lib/python3.10/site-packages/openrb_assignment/dynamixel_registers.py to dynamixel_registers.cpython-310.pyc
+byte-compiling /home/javid/ros2ws/ros2ws/install/openrb_assignment/lib/python3.10/site-packages/openrb_assignment/sin_generator.py to sin_generator.cpython-310.pyc
+byte-compiling /home/javid/ros2ws/ros2ws/install/openrb_assignment/lib/python3.10/site-packages/openrb_assignment/utils.py to utils.cpython-310.pyc
+byte-compiling /home/javid/ros2ws/ros2ws/install/openrb_assignment/lib/python3.10/site-packages/openrb_assignment/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/javid/ros2ws/ros2ws/install/openrb_assignment/lib/python3.10/site-packages/openrb_assignment/wave_tf_viz.launch.py to wave_tf_viz.launch.cpython-310.pyc
+running install_data
+creating /home/javid/ros2ws/ros2ws/install/openrb_assignment/share/ament_index
+creating /home/javid/ros2ws/ros2ws/install/openrb_assignment/share/ament_index/resource_index
+creating /home/javid/ros2ws/ros2ws/install/openrb_assignment/share/ament_index/resource_index/packages
+copying resource/openrb_assignment -> /home/javid/ros2ws/ros2ws/install/openrb_assignment/share/ament_index/resource_index/packages
+copying package.xml -> /home/javid/ros2ws/ros2ws/install/openrb_assignment/share/openrb_assignment
+running install_egg_info
+Copying ../../build/openrb_assignment/openrb_assignment.egg-info to /home/javid/ros2ws/ros2ws/install/openrb_assignment/lib/python3.10/site-packages/openrb_assignment-0.0.0-py3.10.egg-info
+running install_scripts
+Installing listener script to /home/javid/ros2ws/ros2ws/install/openrb_assignment/lib/openrb_assignment
+Installing talker script to /home/javid/ros2ws/ros2ws/install/openrb_assignment/lib/openrb_assignment
+writing list of installed files to '/home/javid/ros2ws/ros2ws/build/openrb_assignment/install.log'
