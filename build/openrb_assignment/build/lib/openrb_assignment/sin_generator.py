@@ -14,7 +14,7 @@ class SinGenerator(Node):
         self.publisher_ = self.create_publisher(Float64, 'sinSignal', 10)
         #declaring params
         self.declare_parameter('frequency', 1.0) #hertz
-        self.declare_parameter('amplitude', 1.0) 
+        self.declare_parameter('amplitude', -20.0) 
         self.declare_parameter('offset', 0.0) #degrees
         self.declare_parameter('timer_period',0.1)
         #extracting params

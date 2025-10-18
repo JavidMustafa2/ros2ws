@@ -2,10 +2,12 @@ import rclpy
 from rclpy.node import Node
 
 from std_msgs.msg import Float64
-
-from dynamixel_client import DynamixelClient
-import dynamixel_registers
-import utils
+from threading import RLock
+from openrb_assignment.dynamixel_client import DynamixelClient
+import openrb_assignment.dynamixel_registers
+import openrb_assignment.utils
+import numpy as np
+from math import pi
 
 class ServoSubscriber(Node):
 
@@ -14,36 +16,69 @@ class ServoSubscriber(Node):
         self.subscription = self.create_subscription(
             Float64,
             'sinSignal',
-            self.listener_callback,
+            self.move_servo_callback,
             10)
         self.subscription  # prevent unused variable warning
-        self.declare_parameter('port', 'ttyACM0') #hertz
+        self.declare_parameter('port', '/dev/ttyACM0') #hertz
         self.declare_parameter('baud', 57600) 
         self.declare_parameter('id', 1) #degrees
        
         #extracting params
         
         self.port= self.get_parameter('port').get_parameter_value().string_value
-        self.baud = self.get_parameter('baud').get_parameter_value().int_value 
-        self.id = self.get_parameter('id').get_parameter_value().int_value 
+        self.baud = self.get_parameter('baud').get_parameter_value().integer_value 
+        self.id = self.get_parameter('id').get_parameter_value().integer_value 
         self.cli = DynamixelClient(
                     motor_ids = [self.id],
                     port = self.port ,
                     baudrate = self.baud,
                     lazy_connect=True
         )
+        self._motor_lock: Rlock = RLock()
 
-    def listener_callback(self, msg):
-        self.get_logger().info('I heard: "%s"' % msg.data, throttle_duration_sec = 10)
+    def enable_torque(self, motor_ids = None):
+        motor_ids = [self.id]
+
+        with self._motor_lock:
+            self.cli.set_torque_enabled(motor_ids,True, retries= 5)
+
+    def disable_torque(self, motor_ids = None):
+        motor_ids = [self.id]
+
+        with self._motor_lock:
+            self.cli.set_torque_enabled(motor_ids,False,retries= 5)
+    
+ 
+    def disconnect(self):
+        
+        with self._motor_lock:
+            self.cli.disconnect()
+    
+    def set_control_mode(self,mode=5,motor_ids=None):
+        motor_ids = [self.id]
+        with self._motor_lock:
+            self.cli.set_operating_mode(motor_ids,mode)
+    
+    def move_servo_callback(self,msg,motor_ids = None):
+        motor_ids = [self.id]
+        command = np.array([msg.data*pi/180])
+        self.cli.write_desired_pos(motor_ids,command)
+
+    
+        
 
 
 def main(args=None):
     rclpy.init(args=args)
-
+    
     servo_subscriber = ServoSubscriber()
+    servo_subscriber.enable_torque()
+    servo_subscriber.set_control_mode()
 
     rclpy.spin(servo_subscriber)
 
+    servo_subscriber.disable_torque()
+    servo_subscriber.disconnect()
     servo_subscriber.destroy_node()
     rclpy.shutdown()
 

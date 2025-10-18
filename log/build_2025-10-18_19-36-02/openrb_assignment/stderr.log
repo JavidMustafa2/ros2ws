@@ -1,0 +1,5 @@
+  File "/home/javid/ros2ws/ros2ws/install/openrb_assignment/lib/python3.10/site-packages/openrb_assignment/servo_subscriber.py", line 7
+    import .dynamixel_registers
+           ^
+SyntaxError: invalid syntax
+
