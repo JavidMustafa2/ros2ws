@@ -1,11 +1,12 @@
 import rclpy
 from rclpy.node import Node
-
+from rclpy.parameter import Parameter
+from rcl_interfaces.msg import SetParametersResult
 from std_msgs.msg import Float64
 from math import sin
 from math import pi
 from time import time 
-
+from geometry_msgs.msg import Twist
 class SinGenerator(Node):
 
     def __init__(self):
@@ -22,11 +23,35 @@ class SinGenerator(Node):
         self.freq= self.get_parameter('frequency').value
         self.amp = self.get_parameter('amplitude').value
         self.off = self.get_parameter('offset').value
+        #make params live editable
+        self.add_on_set_parameters_callback(self.param_callback)
         #create timer and counter
         self.timer = self.create_timer(self.timer_period, self.timer_callback)
         self.start_time = self.get_clock().now()
         self.count = 0
-       
+        #create keyboard input listener
+        self.create_subscription(Twist, "/cmd_vel",self.keyboard_input_callback,10)
+    
+    def param_callback(self,params):
+        for param in params:
+            if param.name == "frequency":
+                self.freq = param.value
+            if param.name == "amplitude":
+                self.amp = param.value
+            if param.name == "offset":
+                self.off = param.value
+        return SetParametersResult(successful=True)
+
+    def keyboard_input_callback(self,msg: Twist):
+       #press w when using telop twist keyboard
+        if msg.linear.x > 0:
+          update = self.get_parameter("amplitude").value + 0.5
+          self.set_parameters([Parameter("amplitude", Parameter.Type.Double, value = update)])
+        #press s when using teleop twist keyboard
+        elif msg.linear.x < 0:
+          update = self.get_parameter("amplitude").value - 0.5
+          self.set_parameters([Parameter("amplitude", Parameter.Type.Double, value = update)])
+  
 
     def timer_callback(self):
         passed_time = (self.get_clock().now() - self.start_time).nanoseconds*1e-9 #seconds

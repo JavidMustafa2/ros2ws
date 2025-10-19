@@ -1,1 +1,1 @@
-python3-numpy:python3-serial:rclpy:ros-humble-dynamixel-sdk:std_msgs
+geometry_msgs:python3-numpy:python3-serial:rclpy:ros-humble-dynamixel-sdk:std_msgs

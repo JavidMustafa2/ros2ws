@@ -1,6 +1,6 @@
 import rclpy
 from rclpy.node import Node
-
+from time import sleep
 from std_msgs.msg import Float64
 from threading import RLock
 from openrb_assignment.dynamixel_client import DynamixelClient
@@ -41,6 +41,12 @@ class ServoSubscriber(Node):
 
         with self._motor_lock:
             self.cli.set_torque_enabled(motor_ids,True, retries= 5)
+            self.initial_pos = self.cli.read_pos()
+        
+      
+
+            
+            
 
     def disable_torque(self, motor_ids = None):
         motor_ids = [self.id]
@@ -62,7 +68,7 @@ class ServoSubscriber(Node):
     def move_servo_callback(self,msg,motor_ids = None):
         motor_ids = [self.id]
         command = np.array([msg.data*pi/180])
-        self.cli.write_desired_pos(motor_ids,command)
+        self.cli.write_desired_pos(motor_ids,self.initial_pos + command)
 
     
         
