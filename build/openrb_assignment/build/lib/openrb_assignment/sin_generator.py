@@ -29,6 +29,7 @@ class SinGenerator(Node):
         self.timer = self.create_timer(self.timer_period, self.timer_callback)
         self.start_time = self.get_clock().now()
         self.count = 0
+        self.mode = 0
         #create keyboard input listener
         self.create_subscription(Twist, "/cmd_vel",self.keyboard_input_callback,10)
     
@@ -42,15 +43,69 @@ class SinGenerator(Node):
                 self.off = param.value
         return SetParametersResult(successful=True)
 
+    def param_change_select(self,mode,msg):
+        if (self.mode == 0) and (msg.linear.x > 0):
+            update = self.get_parameter("amplitude").value + 1.0
+            self.set_parameters([Parameter("amplitude", Parameter.Type.DOUBLE, value = update)])
+        #press m or , or . when using teleop twist keyboard
+        elif (self.mode == 0) and (msg.linear.x < 0):
+            update = self.get_parameter("amplitude").value - 1.0
+            self.set_parameters([Parameter("amplitude", Parameter.Type.DOUBLE, value = update)])
+         #press i or u or o when using telop twist keyboard
+        if (self.mode == 1) and (msg.linear.x > 0):
+            update = self.get_parameter("frequency").value + 1.0
+            self.set_parameters([Parameter("frequency", Parameter.Type.DOUBLE, value = update)])
+        #press m or , or . when using teleop twist keyboard
+        elif (self.mode == 1) and (msg.linear.x < 0):
+            update = self.get_parameter("frequency").value - 1.0
+            self.set_parameters([Parameter("frequency", Parameter.Type.DOUBLE, value = update)])
+         #press i or u or o when using telop twist keyboard
+        if (self.mode == 2) and (msg.linear.x > 0):
+            update = self.get_parameter("frequency").value + (pi/4)
+            self.set_parameters([Parameter("frequency", Parameter.Type.DOUBLE, value = update)])
+        #press m or , or . when using teleop twist keyboard
+        elif (self.mode == 2) and (msg.linear.x < 0):
+            update = self.get_parameter("frequency").value - (pi/4)
+            self.set_parameters([Parameter("frequency", Parameter.Type.DOUBLE, value = update)])
+
     def keyboard_input_callback(self,msg: Twist):
-       #press w when using telop twist keyboard
-        if msg.linear.x > 0:
-          update = self.get_parameter("amplitude").value + 0.5
-          self.set_parameters([Parameter("amplitude", Parameter.Type.Double, value = update)])
-        #press s when using teleop twist keyboard
-        elif msg.linear.x < 0:
-          update = self.get_parameter("amplitude").value - 0.5
-          self.set_parameters([Parameter("amplitude", Parameter.Type.Double, value = update)])
+       
+        def param_change_select(msg: Twist):
+            if (self.mode == 0) and (msg.linear.x > 0):
+                update = self.get_parameter("amplitude").value + 1.0
+                self.set_parameters([Parameter("amplitude", Parameter.Type.DOUBLE, value = update)])
+            #press m or , or . when using teleop twist keyboard
+            elif (self.mode == 0) and (msg.linear.x < 0):
+                update = self.get_parameter("amplitude").value - 1.0
+                self.set_parameters([Parameter("amplitude", Parameter.Type.DOUBLE, value = update)])
+            #press i or u or o when using telop twist keyboard
+            if (self.mode == 1) and (msg.linear.x > 0):
+                update = self.get_parameter("frequency").value + 1.0
+                self.set_parameters([Parameter("frequency", Parameter.Type.DOUBLE, value = update)])
+            #press m or , or . when using teleop twist keyboard
+            elif (self.mode == 1) and (msg.linear.x < 0):
+                update = self.get_parameter("frequency").value - 1.0
+                self.set_parameters([Parameter("frequency", Parameter.Type.DOUBLE, value = update)])
+            #press i or u or o when using telop twist keyboard
+            if (self.mode == 2) and (msg.linear.x > 0):
+                update = self.get_parameter("frequency").value + (pi/4)
+                self.set_parameters([Parameter("frequency", Parameter.Type.DOUBLE, value = update)])
+            #press m or , or . when using teleop twist keyboard
+            elif (self.mode == 2) and (msg.linear.x < 0):
+                update = self.get_parameter("frequency").value - (pi/4)
+                self.set_parameters([Parameter("frequency", Parameter.Type.DOUBLE, value = update)])
+
+        #press j
+        if msg.angular.z > 0 and self.mode <=1:
+            self.mode += 1
+        #press l
+        elif msg.angular.z < 0 and self.mode >=1:
+            self.mode -= 1
+        else:
+            param_change_select(msg)
+        
+        
+ 
   
 
     def timer_callback(self):
@@ -59,7 +114,7 @@ class SinGenerator(Node):
         msg.data = self.amp*sin(2*pi*self.freq*passed_time + (self.off*pi)/180)
         self.publisher_.publish(msg)
         self.count += 1
-        self.get_logger().info('Publishing: "%s"' % msg.data, throttle_duration_sec = 10)
+        self.get_logger().info('Publishing: "%s"' % self.mode, throttle_duration_sec = 0.01)
         self.get_logger().info('Publish Count: "%s"' % self.count, throttle_duration_sec = 10)
         
 
