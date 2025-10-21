@@ -24,6 +24,13 @@ def generate_launch_description():
             executable='listener',
             name='servo_subscriber',
             parameters=[config + '/servo_subscriber_config.yaml'],
+        ),
+        Node(
+            package='teleop_twist_keyboard',
+            node_executable="teleop_twist_keyboard",
+            output='screen',
+            prefix = 'xterm -e',
+            node_name='teleop',
         )
     ])
 
