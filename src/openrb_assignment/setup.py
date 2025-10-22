@@ -10,6 +10,7 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name +'/launch',['launch/asg2.launch.py']),
+        ('share/' + package_name +'/launch',['launch/wave_tf_viz.launch.py']),
         ('share/' + package_name, ['package.xml']),
         ('share/' + package_name +'/config', ['config/servo_subscriber_config.yaml']),
         ('share/' + package_name +'/config', ['config/sin_generator_config.yaml']),
@@ -28,6 +29,7 @@ setup(
     entry_points={
         'console_scripts': ['talker = openrb_assignment.sin_generator:main',
                             'listener = openrb_assignment.servo_subscriber:main',
+                            'wave_tf_broadcaster = openrb_assignment.wave_tf_broadcaster:main',
         ],
     },
 )

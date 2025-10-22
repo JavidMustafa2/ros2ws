@@ -1,0 +1,6 @@
+sin_generator:
+    ros__parameters:
+      frequency: 1.0
+      amplitude: 5.0
+      offset: 0.0
+      timer_period: 0.01

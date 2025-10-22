@@ -1,0 +1,26 @@
+running egg_info
+writing build/openrb_assignment/openrb_assignment.egg-info/PKG-INFO
+writing dependency_links to build/openrb_assignment/openrb_assignment.egg-info/dependency_links.txt
+writing entry points to build/openrb_assignment/openrb_assignment.egg-info/entry_points.txt
+writing requirements to build/openrb_assignment/openrb_assignment.egg-info/requires.txt
+writing top-level names to build/openrb_assignment/openrb_assignment.egg-info/top_level.txt
+reading manifest file 'build/openrb_assignment/openrb_assignment.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file 'build/openrb_assignment/openrb_assignment.egg-info/SOURCES.txt'
+running build
+running build_py
+copying openrb_assignment/wave_tf_broadcaster.py -> /home/javid/ros2ws/ros2ws/src/openrb_assignment/build/openrb_assignment/build/lib/openrb_assignment
+running install
+running install_lib
+copying /home/javid/ros2ws/ros2ws/src/openrb_assignment/build/openrb_assignment/build/lib/openrb_assignment/wave_tf_broadcaster.py -> /home/javid/ros2ws/ros2ws/src/openrb_assignment/install/openrb_assignment/lib/python3.10/site-packages/openrb_assignment
+byte-compiling /home/javid/ros2ws/ros2ws/src/openrb_assignment/install/openrb_assignment/lib/python3.10/site-packages/openrb_assignment/wave_tf_broadcaster.py to wave_tf_broadcaster.cpython-310.pyc
+running install_data
+copying launch/wave_tf_viz.launch.py -> /home/javid/ros2ws/ros2ws/src/openrb_assignment/install/openrb_assignment/share/openrb_assignment/launch
+running install_egg_info
+removing '/home/javid/ros2ws/ros2ws/src/openrb_assignment/install/openrb_assignment/lib/python3.10/site-packages/openrb_assignment-0.0.0-py3.10.egg-info' (and everything under it)
+Copying build/openrb_assignment/openrb_assignment.egg-info to /home/javid/ros2ws/ros2ws/src/openrb_assignment/install/openrb_assignment/lib/python3.10/site-packages/openrb_assignment-0.0.0-py3.10.egg-info
+running install_scripts
+Installing listener script to /home/javid/ros2ws/ros2ws/src/openrb_assignment/install/openrb_assignment/lib/openrb_assignment
+Installing talker script to /home/javid/ros2ws/ros2ws/src/openrb_assignment/install/openrb_assignment/lib/openrb_assignment
+Installing wave_tf_broadcaster script to /home/javid/ros2ws/ros2ws/src/openrb_assignment/install/openrb_assignment/lib/openrb_assignment
+writing list of installed files to '/home/javid/ros2ws/ros2ws/src/openrb_assignment/build/openrb_assignment/install.log'

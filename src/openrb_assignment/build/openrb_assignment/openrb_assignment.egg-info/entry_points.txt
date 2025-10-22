@@ -1,0 +1,5 @@
+[console_scripts]
+listener = openrb_assignment.servo_subscriber:main
+talker = openrb_assignment.sin_generator:main
+wave_tf_broadcaster = openrb_assignment.wave_tf_broadcaster:main
+
